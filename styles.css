@@ -316,8 +316,9 @@ body:has(a:hover, button:hover) #cursor { transform: translate(-50%,-50%) scale(
 .highlight { color: var(--red); }
 
 .stats-grid {
-  display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 2px;
-  justify-items: center;
+  display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 2px;
+  place-items: center; margin: 0 auto;
+  max-width: 1200px; padding: 0 20px;
 }
 .stat-card {
   background: var(--grey-mid); padding: 40px 30px;
@@ -344,7 +345,10 @@ body:has(a:hover, button:hover) #cursor { transform: translate(-50%,-50%) scale(
 .paralelo-section { padding: 100px 60px; background: var(--black); }
 .paralelo-header  { margin-bottom: 60px; }
 
-.paralelo-grid { display: flex; flex-direction: column; gap: 2px; }
+.paralelo-grid { 
+  display: flex; flex-direction: column; gap: 2px; 
+  max-width: 1200px; margin: 0 auto;
+}
 .par-item {
   display: grid; grid-template-columns: 1fr 60px 1fr;
   align-items: center; background: var(--grey);
@@ -449,7 +453,8 @@ body:has(a:hover, button:hover) #cursor { transform: translate(-50%,-50%) scale(
 
 .posts-grid {
   display: grid; grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
-  gap: 20px; margin-top: 50px; justify-items: center;
+  gap: 20px; margin-top: 50px; place-items: center;
+  max-width: 1200px; margin-left: auto; margin-right: auto;
 }
 .post-card { width: 100%; max-width: 400px; }
 .post-card {
@@ -574,7 +579,8 @@ body:has(a:hover, button:hover) #cursor { transform: translate(-50%,-50%) scale(
 
 .voices-grid {
   display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-  gap: 20px; margin-top: 50px; justify-items: center;
+  gap: 20px; margin-top: 50px; place-items: center;
+  max-width: 1200px; margin-left: auto; margin-right: auto;
 }
 .voice-card { width: 100%; max-width: 360px; }
 .voice-card {
@@ -737,8 +743,9 @@ body:has(a:hover, button:hover) #cursor { transform: translate(-50%,-50%) scale(
 .acao-section { padding: 80px 60px; background: var(--black); }
 
 .acao-grid {
-  display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px; margin: 50px 0 80px; justify-items: center;
+  display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px; margin: 50px auto 80px; place-items: center;
+  max-width: 1200px;
 }
 .acao-card { width: 100%; max-width: 280px; }
 .acao-card {
@@ -896,8 +903,14 @@ body:has(a:hover, button:hover) #cursor { transform: translate(-50%,-50%) scale(
 
 @media (max-width: 600px) {
   .hero-title { font-size: clamp(3rem,12vw,5rem); }
-  .posts-grid { grid-template-columns: 1fr; }
-  .voices-grid { grid-template-columns: 1fr; }
+  .posts-grid { grid-template-columns: 1fr; place-items: center; }
+  .voices-grid { grid-template-columns: 1fr; place-items: center; }
+  .stats-grid { grid-template-columns: 1fr; place-items: center; }
+  .acao-grid { grid-template-columns: 1fr; place-items: center; }
+  .post-card { width: 100%; max-width: 100%; }
+  .voice-card { width: 100%; max-width: 100%; }
+  .stat-card { width: 100%; max-width: 100%; }
+  .acao-card { width: 100%; max-width: 100%; }
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
