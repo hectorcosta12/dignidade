@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIGNIDADE — A Igreja, a Inquisição e os Direitos Humanos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+English:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- ══════════════════════════════
+       LOADING SCREEN
+  ══════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-cross">✝</div>
+    <div class="loader-text">A DIGNIDADE NÃO ESPERA...</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+
+  <!-- ══════════════════════════════
+       NAVBAR
+  ══════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-left">
+      <span class="nav-logo" data-page="home">⬛ DIGNIDADE</span>
+    </div>
+    <div class="nav-links">
+      <a data-page="home" class="nav-link active">#início</a>
+      <a data-page="denuncia" class="nav-link">#denúncia</a>
+      <a data-page="personagens" class="nav-link">#vozes</a>
+      <a data-page="manifesto" class="nav-link">#manifesto</a>
+      <a data-page="acao" class="nav-link">#agir</a>
+    </div>
+    <button class="nav-burger" id="burger">☰</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a data-page="home">Início</a>
+    <a data-page="denuncia">Denúncia</a>
+    <a data-page="personagens">Vozes</a>
+    <a data-page="manifesto">Manifesto</a>
+    <a data-page="acao">Agir</a>
+  </div>
+
+  <!-- ══════════════════════════════
+       PAGE: HOME
+  ══════════════════════════════ -->
+  <div class="page active" id="page-home">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-stamp">URGENTE</div>
+
+      <div class="hero-bg-split">
+        <div class="hero-half hero-left">
+          <div class="hero-img-wrap">
+            <div class="hero-img baroque-filter" id="hero-img-baroque"></div>
+            <div class="half-label">séc. XVIII</div>
+          </div>
+        </div>
+        <div class="hero-half hero-right">
+          <div class="hero-img-wrap">
+            <div class="hero-img modern-filter" id="hero-img-modern"></div>
+            <div class="half-label">séc. XXI</div>
+          </div>
+        </div>
+        <div class="hero-divider-line"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">Memorial do Convento · Saramago · 1982 → Hoje</p>
+        <h1 class="hero-title">
+          <span class="line-1">QUANDO A</span>
+          <span class="line-2">DIGNIDADE</span>
+          <span class="line-3">É UM</span>
+          <span class="line-4">CRIME?</span>
+        </h1>
+        <div class="hero-sub-wrap">
+          <p class="hero-sub">No séc. XVIII, a Igreja destruía quem pensava.<br>No séc. XXI, o sistema ignora quem <strong>existe.</strong></p>
+          <div class="hero-tag-row">
+            <span class="tag tag-red">#DignidadeHumana</span>
+            <span class="tag tag-white">#Inquisição</span>
+            <span class="tag tag-red">#OpressãoSocial</span>
+          </div>
+        </div>
+        <button class="hero-cta" data-page="denuncia">
+          VER A DENÚNCIA
+          <span class="cta-arrow">↓</span>
+        </button>
+      </div>
+
+      <div class="hero-scroll-hint">
+        <span>SCROLL</span>
+        <div class="scroll-bar"></div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker-track" id="ticker">
+        <span>⬛ A INQUISIÇÃO QUEIMAVA CORPOS — O SISTEMA ATUAL APAGA VOZES</span>
+        <span>✝ SEM DIGNIDADE NÃO HÁ DIREITO QUE VALHA</span>
+        <span>⬛ ONTEM: HERESIA. HOJE: DESINFORMAÇÃO. O NOME MUDOU. O SILÊNCIO, NÃO.</span>
+        <span>✝ 50 MILHÕES DE PESSOAS EM ESCRAVIDÃO MODERNA EM 2024</span>
+        <span>⬛ A REPRESSÃO NÃO DESAPARECEU — APRENDEU A USAR GRAVATA</span>
+        <span>✝ ARTIGO 1.º DUDH: "TODOS NASCEM LIVRES E IGUAIS EM DIGNIDADE" — TODOS?</span>
+        <span>⬛ A INQUISIÇÃO FOI ABOLIDA. A OPRESSÃO, NÃO.</span>
+        <span>✝ A IGREJA CONTROLAVA COM O MEDO DE DEUS — QUEM CONTROLA COM QUÊ HOJE?</span>
+        <span>⬛ A INQUISIÇÃO QUEIMAVA CORPOS — O SISTEMA ATUAL APAGA VOZES</span>
+        <span>✝ SEM DIGNIDADE NÃO HÁ DIREITO QUE VALHA</span>
+        <span>⬛ ONTEM: HERESIA. HOJE: DESINFORMAÇÃO. O NOME MUDOU. O SILÊNCIO, NÃO.</span>
+      </div>
+    </div>
+
+    <!-- STAT SECTION -->
+    <section class="stats-section">
+      <div class="stats-header">
+        <p class="section-tag">// dados · repressão · séc. XXI</p>
+        <h2 class="section-title">A OPRESSÃO<br>EM <span class="highlight">NÚMEROS</span></h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card" data-val="160000000">
+          <div class="stat-num" data-target="160000000">0</div>
+          <div class="stat-label">crianças em trabalho forçado — dignidade negada desde o nascimento</div>
+          <div class="stat-src">— OIT, 2024</div>
+        </div>
+        <div class="stat-card" data-val="50000000">
+          <div class="stat-num" data-target="50000000">0</div>
+          <div class="stat-label">pessoas em escravidão moderna — a Inquisição tem novos métodos</div>
+          <div class="stat-src">— Walk Free, 2023</div>
+        </div>
+        <div class="stat-card" data-val="79">
+          <div class="stat-num" data-target="79">0</div>
+          <div class="stat-label">países com leis que criminalizam a expressão religiosa ou política</div>
+          <div class="stat-src">— ONU, 2023</div>
+        </div>
+        <div class="stat-card" data-val="1">
+          <div class="stat-num" data-target="1">0</div>
+          <div class="stat-label">direito violado repetidamente: a dignidade inerente a todo o ser humano</div>
+          <div class="stat-src">— Art. 1.º DUDH, 1948</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALELO SECTION -->
+    <section class="paralelo-section">
+      <div class="paralelo-header">
+        <p class="section-tag">// séc. XVIII vs séc. XXI</p>
+        <h2 class="section-title">A REPRESSÃO<br><span class="highlight">REINVENTOU-SE</span></h2>
+      </div>
+      <div class="paralelo-grid">
+        <div class="par-item">
+          <div class="par-then">
+            <span class="par-era">Séc. XVIII</span>
+            <p>A Inquisição condena à fogueira quem questiona a doutrina.</p>
+          </div>
+          <div class="par-arrow">→</div>
+          <div class="par-now">
+            <span class="par-era now">Séc. XXI</span>
+            <p>Governos silenciam jornalistas e ativistas com leis de censura digital.</p>
+          </div>
+        </div>
+        <div class="par-item">
+          <div class="par-then">
+            <span class="par-era">Séc. XVIII</span>
+            <p>D. João V usa a Igreja para justificar o uso forçado do povo.</p>
+          </div>
+          <div class="par-arrow">→</div>
+          <div class="par-now">
+            <span class="par-era now">Séc. XXI</span>
+            <p>Regimes usam religião e ideologia para legitimar opressão e desigualdade.</p>
+          </div>
+        </div>
+        <div class="par-item">
+          <div class="par-then">
+            <span class="par-era">Séc. XVIII</span>
+            <p>Ser diferente é heresia. A diferença pune-se com morte ou exílio.</p>
+          </div>
+          <div class="par-arrow">→</div>
+          <div class="par-now">
+            <span class="par-era now">Séc. XXI</span>
+            <p>Minorias são criminalizadas em mais de 70 países por aquilo que são.</p>
+          </div>
+        </div>
+        <div class="par-item">
+          <div class="par-then">
+            <span class="par-era">Séc. XVIII</span>
+            <p>O povo não tem voz — existe apenas para servir o poder.</p>
+          </div>
+          <div class="par-arrow">→</div>
+          <div class="par-now">
+            <span class="par-era now">Séc. XXI</span>
+            <p>Trabalhadores sem contrato, sem direitos, sem nome — constroem o mundo que não herdarão.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SARAMAGO QUOTE -->
+    <section class="quote-section">
+      <div class="quote-bg-text">DIGNIDADE</div>
+      <blockquote class="big-quote">
+        <span class="quote-mark">"</span>
+        A Igreja dizia que era a voz de Deus.<br>Mas era apenas mais um poder com medo do povo.
+        <span class="quote-mark">"</span>
+      </blockquote>
+      <cite class="big-cite">— Inspirado em Memorial do Convento, José Saramago</cite>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">⬛ DIGNIDADE</div>
+        <p class="footer-sub">Projeto artístico digital · Memorial do Convento · José Saramago</p>
+        <p class="footer-sub">Direitos Humanos — Art. 1.º DUDH · Serão uma utopia?</p>
+        <div class="footer-tags">
+          <span class="tag tag-sm">#DignidadeHumana</span>
+          <span class="tag tag-sm">#Saramago</span>
+          <span class="tag tag-sm">#MemorialDoConvento</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /page-home -->
+
+
+  <!-- ══════════════════════════════
+       PAGE: DENÚNCIA
+  ══════════════════════════════ -->
+  <div class="page" id="page-denuncia">
+
+    <section class="inner-hero">
+      <div class="inner-hero-bg" id="denuncia-bg"></div>
+      <div class="inner-hero-overlay"></div>
+      <div class="inner-hero-content">
+        <p class="inner-tag">// denúncia pública</p>
+        <h1 class="inner-title">A DIGNIDADE<br>COMO <em>CRIME</em></h1>
+        <p class="inner-sub">A Inquisição não desapareceu. Apenas aprendeu a usar outros instrumentos.</p>
+      </div>
+    </section>
+
+    <section class="post-feed">
+      <p class="section-tag center">// feed de protesto · simulação de rede social</p>
+      <h2 class="section-title center">SE SARAMAGO<br>PUBLICASSE <span class="highlight">HOJE</span></h2>
+
+      <div class="posts-grid">
+
+        <div class="post-card">
+          <div class="post-header">
+            <div class="post-avatar">📖</div>
+            <div class="post-meta">
+              <strong>@memorial_do_convento</strong>
+              <span>· 3h</span>
+            </div>
+            <div class="post-verified">✓</div>
+          </div>
+          <div class="post-img-wrap">
+            <div class="post-img baroque-small" id="post-img-1"></div>
+            <div class="post-img-caption">Construção do Convento de Mafra, séc. XVIII</div>
+          </div>
+          <p class="post-text">
+            40.000 pessoas arrancadas das suas casas para construir um convento que nunca vão usar. A Igreja chamou-lhe devoção. A história chama-lhe exploração. Nós chamamos-lhe o que sempre foi: a dignidade humana reduzida a pedra de construção. <span class="hashtag">#DignidadeHumana</span> <span class="hashtag">#InquisiçãoSéc18</span>
+          </p>
+          <div class="post-actions">
+            <button class="post-btn like-btn" data-likes="12847">♥ <span>12.847</span></button>
+            <button class="post-btn">↻ 8.302</button>
+            <button class="post-btn">💬 4.109</button>
+          </div>
+        </div>
+
+        <div class="post-card post-alert">
+          <div class="post-header">
+            <div class="post-avatar red">⚠</div>
+            <div class="post-meta">
+              <strong>@blimunda_vidente</strong>
+              <span>· 1h</span>
+            </div>
+          </div>
+          <p class="post-text large">
+            "Queimaram a minha mãe por ver o que os outros não queriam ver.<br>
+            Hoje não precisam de fogueiras — têm algoritmos."
+          </p>
+          <p class="post-text">
+            A Inquisição perseguia quem pensava diferente. Em 2024, regimes autoritários prendem jornalistas, bloqueiam internet e criminalizam o dissenso. A ferramenta modernizou-se. A opressão, não. <span class="hashtag">#CensuraDigital</span> <span class="hashtag">#LiberdadeDeExpressão</span>
+          </p>
+          <div class="post-actions">
+            <button class="post-btn like-btn" data-likes="34521">♥ <span>34.521</span></button>
+            <button class="post-btn">↻ 21.445</button>
+            <button class="post-btn">💬 9.876</button>
+          </div>
+        </div>
+
+        <div class="post-card">
+          <div class="post-header">
+            <div class="post-avatar">⚒</div>
+            <div class="post-meta">
+              <strong>@baltasar_sete_sois</strong>
+              <span>· 5h</span>
+            </div>
+          </div>
+          <p class="post-text">
+            Fui à guerra pelo rei. Perdi o braço. Voltei e fui trabalhar para o convento que esse mesmo rei mandou construir. Sem direitos. Sem salário. Sem escolha.<br><br>
+            Hoje chama-se "gig economy". A lógica é idêntica: extrair tudo de quem não tem poder de recusar. <span class="hashtag">#ExploraçãoLaboral</span> <span class="hashtag">#DignidadeNoTrabalho</span>
+          </p>
+          <div class="post-actions">
+            <button class="post-btn like-btn" data-likes="9234">♥ <span>9.234</span></button>
+            <button class="post-btn">↻ 5.101</button>
+            <button class="post-btn">💬 2.890</button>
+          </div>
+        </div>
+
+        <div class="post-card post-thread">
+          <div class="post-header">
+            <div class="post-avatar">✝</div>
+            <div class="post-meta">
+              <strong>@santa_inquisição_oficial</strong>
+              <span class="handle-red">· conta suspensa</span>
+            </div>
+          </div>
+          <div class="suspended-banner">
+            🚫 ESTA CONTA FOI SUSPENSA POR VIOLAÇÃO DOS TERMOS DE UTILIZAÇÃO
+            <br><small>Motivo: incitamento ao ódio · perseguição religiosa · crimes contra a humanidade</small>
+          </div>
+          <p class="post-text muted">
+            <em>Conteúdo removido por violar normas de direitos humanos.<br>847 anos de actividade · inúmeras vidas destruídas.</em>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REPORT SECTION -->
+    <section class="report-section">
+      <p class="section-tag center">// artigo 1.º · declaração universal dos direitos humanos · 1948</p>
+      <div class="report-box">
+        <div class="report-stamp">AINDA VÁLIDO</div>
+        <p class="report-text">
+          "Todos os seres humanos nascem livres e iguais em <strong>dignidade</strong> e em direitos. Dotados de razão e de consciência, devem agir uns para com os outros em espírito de fraternidade."
+        </p>
+        <div class="report-vs">
+          <div class="report-then">
+            <h4>O QUE A INQUISIÇÃO FEZ</h4>
+            <ul>
+              <li>Queimou pessoas por pensar, crer ou amar diferente</li>
+              <li>Aliou-se ao rei para controlar corpos e consciências</li>
+              <li>Usou o medo de Deus para suprimir a liberdade humana</li>
+              <li>Apagou a dignidade de quem não servia o poder</li>
+            </ul>
+          </div>
+          <div class="report-divider">VS</div>
+          <div class="report-now">
+            <h4>O QUE ACONTECE HOJE</h4>
+            <ul>
+              <li>Jornalistas presos em 57 países por escrever a verdade</li>
+              <li>Leis anti-blasfémia ativas em 79 países — pensamento criminalizado</li>
+              <li>Regimes autoritários usam religião para suprimir oposição</li>
+              <li>50 milhões em escravidão moderna — dignidade inexistente</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">⬛ DIGNIDADE</div>
+        <p class="footer-sub">Projeto artístico digital · Memorial do Convento · José Saramago</p>
+      </div>
+    </footer>
+
+  </div><!-- /page-denuncia -->
+
+
+  <!-- ══════════════════════════════
+       PAGE: PERSONAGENS / VOZES
+  ══════════════════════════════ -->
+  <div class="page" id="page-personagens">
+
+    <section class="inner-hero">
+      <div class="inner-hero-bg" id="vozes-bg"></div>
+      <div class="inner-hero-overlay"></div>
+      <div class="inner-hero-content">
+        <p class="inner-tag">// repressão ontem e hoje</p>
+        <h1 class="inner-title">QUEM<br><em>PAGA</em> O PREÇO?</h1>
+        <p class="inner-sub">As vítimas mudam de século. A lógica da opressão, não.</p>
+      </div>
+    </section>
+
+    <section class="voices-section">
+      <p class="section-tag center">// personagens como espelhos do presente</p>
+      <h2 class="section-title center">DO SÉCULO XVIII<br><span class="highlight">AO SÉCULO XXI</span></h2>
+
+      <div class="voices-grid">
+
+        <div class="voice-card" id="vc-blimunda">
+          <div class="voice-era-badge">PERSONAGEM</div>
+          <div class="voice-top">
+            <div class="voice-icon">◎</div>
+            <div>
+              <h3 class="voice-name">Blimunda</h3>
+              <span class="voice-role">A Vidente · Séc. XVIII perseguida · Séc. XXI censurada</span>
+            </div>
+          </div>
+          <div class="voice-testimony">
+            <p class="testimony-intro">O que a Inquisição lhe fez — e o que o séc. XXI repetiria:</p>
+            <ul class="testimony-list">
+              <li>🔴 Perseguida por ver além do que o poder permite</li>
+              <li>🔴 Censurada nas redes sociais por expor a verdade</li>
+              <li>🔴 Rotulada de "desinformadora" ao questionar o sistema</li>
+              <li>🟢 Exige o direito à liberdade de expressão e de pensamento</li>
+            </ul>
+          </div>
+          <div class="voice-right-box">
+            <span class="right-label">DIREITO VIOLADO</span>
+            <p class="right-text">Art. 19.º DUDH — Liberdade de Opinião, Expressão e Pensamento</p>
+          </div>
+          <div class="voice-quote">
+            "A Inquisição temia o que eu via. O poder sempre teme quem vê a verdade."
+          </div>
+        </div>
+
+        <div class="voice-card" id="vc-baltasar">
+          <div class="voice-era-badge">PERSONAGEM</div>
+          <div class="voice-top">
+            <div class="voice-icon">✦</div>
+            <div>
+              <h3 class="voice-name">Baltasar</h3>
+              <span class="voice-role">O Explorado · Séc. XVIII sem direitos · Séc. XXI sem contrato</span>
+            </div>
+          </div>
+          <div class="voice-testimony">
+            <p class="testimony-intro">A lógica da exploração que persiste:</p>
+            <ul class="testimony-list">
+              <li>🔴 Corpo usado pelo rei — depois descartado sem compensação</li>
+              <li>🔴 Trabalhador de plataforma: produtivo hoje, invisível amanhã</li>
+              <li>🔴 Sem proteção social, sem voz, sem dignidade reconhecida</li>
+              <li>🟢 Exige trabalho digno e proteção da sua humanidade</li>
+            </ul>
+          </div>
+          <div class="voice-right-box">
+            <span class="right-label">DIREITO VIOLADO</span>
+            <p class="right-text">Art. 23.º DUDH — Direito ao Trabalho Digno e Condições Justas</p>
+          </div>
+          <div class="voice-quote">
+            "Dei o braço pelo rei e a vida pelo convento. O sistema nunca soube o meu nome."
+          </div>
+        </div>
+
+        <div class="voice-card" id="vc-povo">
+          <div class="voice-era-badge">GRUPO SOCIAL</div>
+          <div class="voice-top">
+            <div class="voice-icon">∞</div>
+            <div>
+              <h3 class="voice-name">O Povo Anónimo</h3>
+              <span class="voice-role">Séc. XVIII invisível · Séc. XXI continua invisível</span>
+            </div>
+          </div>
+          <div class="voice-testimony">
+            <p class="testimony-intro">O que não mudou em 300 anos:</p>
+            <ul class="testimony-list">
+              <li>🔴 Sem nome na história — usados, descartados, esquecidos</li>
+              <li>🔴 Constroem o mundo que não lhes pertence</li>
+              <li>🔴 Sem documentos, sem representação, sem dignidade reconhecida</li>
+              <li>🟢 Exigem o direito fundamental de existir com dignidade</li>
+            </ul>
+          </div>
+          <div class="voice-right-box">
+            <span class="right-label">DIREITO VIOLADO</span>
+            <p class="right-text">Art. 1.º DUDH — Dignidade Inerente a Todo o Ser Humano</p>
+          </div>
+          <div class="voice-quote">
+            "Erguemos o convento. A história escreveu os nomes dos reis. Nunca o nosso."
+          </div>
+        </div>
+
+        <div class="voice-card voice-church">
+          <div class="voice-era-badge antagonist">PODER OPRESSOR</div>
+          <div class="voice-top">
+            <div class="voice-icon">✝</div>
+            <div>
+              <h3 class="voice-name">A Igreja · A Inquisição</h3>
+              <span class="voice-role">Ontem o terror sagrado · Hoje a repressão institucionalizada</span>
+            </div>
+          </div>
+          <div class="voice-testimony">
+            <p class="testimony-intro">O que a Igreja fez — e o que as instituições repetem:</p>
+            <ul class="testimony-list">
+              <li>⬛ Usou a fé como instrumento de controlo e terror</li>
+              <li>⬛ Aliou-se ao Estado para oprimir quem questionava</li>
+              <li>⬛ Eliminou a liberdade de pensamento em nome da verdade</li>
+              <li>⬛ Nunca respondeu perante nenhum tribunal pelos seus crimes</li>
+            </ul>
+          </div>
+          <div class="voice-right-box antagonist-box">
+            <span class="right-label">DIREITO SUPRIMIDO</span>
+            <p class="right-text">Art. 1.º — A dignidade humana foi negada sistematicamente em nome de Deus e do rei</p>
+          </div>
+          <div class="voice-quote antagonist-quote">
+            "Em nome de Deus, suprimimos tudo o que Deus, segundo dizem, nos deu: a liberdade."
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">⬛ DIGNIDADE</div>
+        <p class="footer-sub">Projeto artístico digital · Memorial do Convento · José Saramago</p>
+      </div>
+    </footer>
+
+  </div><!-- /page-personagens -->
+
+
+  <!-- ══════════════════════════════
+       PAGE: MANIFESTO
+  ══════════════════════════════ -->
+  <div class="page" id="page-manifesto">
+
+    <section class="manifesto-hero">
+      <div class="manifesto-bg-text">MANIFESTO</div>
+      <div class="manifesto-content">
+        <p class="inner-tag">// manifestação artística digital</p>
+        <h1 class="manifesto-title">
+          <span>NÃO</span>
+          <span>É</span>
+          <span>PASSADO.</span>
+          <span>É</span>
+          <span>HOJE.</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="manifesto-body">
+
+      <div class="manifesto-block">
+        <div class="manifesto-num">01</div>
+        <div class="manifesto-text">
+          <h3>A INQUISIÇÃO NUNCA MORREU</h3>
+          <p>Foi abolida formalmente. Mas a lógica que a sustentava — suprimir o pensamento livre, punir quem questiona, usar o poder institucional para esmagar o indivíduo — essa lógica está viva. Mudou de nome, de farda, de plataforma. O mecanismo é o mesmo.</p>
+        </div>
+      </div>
+
+      <div class="manifesto-block reverse">
+        <div class="manifesto-num">02</div>
+        <div class="manifesto-text">
+          <h3>A DIGNIDADE NÃO SE CONCEDE — EXISTE</h3>
+          <p>O Artigo 1.º da Declaração Universal dos Direitos Humanos não é uma concessão do Estado — é um reconhecimento de algo que nenhum poder pode criar nem destruir. A Igreja do séc. XVIII ignorou-o. Regimes, empresas e sistemas do séc. XXI continuam a ignorá-lo.</p>
+        </div>
+      </div>
+
+      <div class="manifesto-block">
+        <div class="manifesto-num">03</div>
+        <div class="manifesto-text">
+          <h3>EXPRESSÃO É SOBREVIVÊNCIA</h3>
+          <p>Quando Blimunda via o interior das pessoas, estava a exercer a única liberdade que ninguém pode confiscar: pensar. A censura — seja da Inquisição ou de um algoritmo — ataca exatamente isso. Silenciar uma voz não é apenas um crime. É uma amputação da humanidade.</p>
+        </div>
+      </div>
+
+      <div class="manifesto-block reverse">
+        <div class="manifesto-num">04</div>
+        <div class="manifesto-text">
+          <h3>A ARTE DENUNCIA O QUE O PODER QUER ESCONDER</h3>
+          <p>Saramago não escreveu história — escreveu um espelho. Usou o séc. XVIII para mostrar o séc. XX. E o séc. XX para falar do XXI. A palavra poética é o instrumento mais subversivo que existe, porque não pode ser preso, queimado nem banido — enquanto houver quem a leia.</p>
+        </div>
+      </div>
+
+      <div class="manifesto-final">
+        <div class="mf-cross">✝</div>
+        <h2 class="mf-title">A DIGNIDADE NÃO É UTOPIA.<br>É O MÍNIMO.</h2>
+        <p class="mf-answer">O que é utopia é achar que podemos continuar a ignorá-la.</p>
+        <div class="mf-sign">
+          <span>— Saramago mostrou-nos o séc. XVIII.</span>
+          <span>Nós estamos a construir o séc. XXI. Como queremos que seja lembrado?</span>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">⬛ DIGNIDADE</div>
+        <p class="footer-sub">Projeto artístico digital · Memorial do Convento · José Saramago</p>
+      </div>
+    </footer>
+
+  </div><!-- /page-manifesto -->
+
+
+  <!-- ══════════════════════════════
+       PAGE: AÇÃO
+  ══════════════════════════════ -->
+  <div class="page" id="page-acao">
+
+    <section class="inner-hero">
+      <div class="inner-hero-bg" id="acao-bg"></div>
+      <div class="inner-hero-overlay dark-overlay"></div>
+      <div class="inner-hero-content">
+        <p class="inner-tag">// resistência e cidadania</p>
+        <h1 class="inner-title">NÃO<br><em>CALES</em></h1>
+        <p class="inner-sub">Conhecer a opressão é o primeiro passo para a recusar.</p>
+      </div>
+    </section>
+
+    <section class="acao-section">
+      <p class="section-tag center">// contra a opressão · ferramentas de resistência</p>
+      <h2 class="section-title center">A TUA VOZ<br><span class="highlight">É SUBVERSIVA</span></h2>
+
+      <div class="acao-grid">
+
+        <div class="acao-card">
+          <div class="acao-icon">📢</div>
+          <h3>DENUNCIA</h3>
+          <p>A Inquisição temia quem falava. As redes sociais são a praça pública que ela nunca toleraria. Usa-as para denunciar opressão, censura e violações de dignidade humana.</p>
+          <div class="acao-tags">
+            <span class="tag tag-sm">#DignidadeHumana</span>
+            <span class="tag tag-sm">#OpressãoZero</span>
+          </div>
+        </div>
+
+        <div class="acao-card">
+          <div class="acao-icon">📖</div>
+          <h3>CONHECE</h3>
+          <p>A Inquisição prosperou na ignorância. Lê os 30 artigos da Declaração Universal dos Direitos Humanos. Saber o que te pertence é o acto mais subversivo que podes fazer.</p>
+          <a class="acao-link" href="https://www.ohchr.org/en/human-rights/universal-declaration" target="_blank">
+            → Ver DUDH completa
+          </a>
+        </div>
+
+        <div class="acao-card">
+          <div class="acao-icon">✍️</div>
+          <h3>ESCREVE</h3>
+          <p>Saramago usou a palavra para fazer o que o poder quis impedir: revelar. Escreve. Publica. Partilha. A palavra é o único instrumento que o poder nunca conseguiu destruir completamente.</p>
+        </div>
+
+        <div class="acao-card">
+          <div class="acao-icon">👁</div>
+          <h3>QUESTIONA</h3>
+          <p>Blimunda via o interior das coisas. Recusa as narrativas prontas. Pergunta sempre: quem beneficia? Quem paga o preço? Quem está a ser silenciado? O pensamento crítico é heresia para o poder.</p>
+        </div>
+
+      </div>
+
+      <!-- CAMPAIGN POSTER -->
+      <div class="poster-section">
+        <p class="section-tag center">// campanha visual</p>
+        <div class="poster" id="campaign-poster">
+          <div class="poster-cross">✝</div>
+          <div class="poster-headline">A DIGNIDADE</div>
+          <div class="poster-sub-headline">NÃO SE QUEIMA</div>
+          <div class="poster-body">
+            A Inquisição tentou.<br>
+            O tempo julgou-a.<br>
+            A opressão moderna ainda aguarda julgamento.<br>
+            A história repete-se para quem não aprende com ela.
+          </div>
+          <div class="poster-tags">
+            #DignidadeHumana &nbsp;·&nbsp; #Inquisição &nbsp;·&nbsp; #OpressãoSocial
+          </div>
+          <div class="poster-bottom">
+            SARAMAGO · 1982 → SEMPRE
+          </div>
+        </div>
+      </div>
+
+      <!-- REFLECTION SECTION -->
+      <div class="reflection-section">
+        <p class="section-tag center">// a palavra como resistência</p>
+        <h2 class="section-title center">A LITERATURA<br>COMO <span class="highlight">PROTESTO</span></h2>
+        <div class="reflection-body">
+          <p>Saramago não escolheu o séc. XVIII por acaso. Escolheu-o porque a aliança entre o poder político e o poder religioso — que esmagou a dignidade do povo — não era história. Era um aviso.</p>
+          <p>A <strong>palavra poética</strong> faz o que nenhuma lei consegue: obriga-nos a sentir. Quando lemos sobre os trabalhadores anónimos do Convento de Mafra, não lemos o passado — lemos o presente com outro nome.</p>
+          <p>A <strong>liberdade de expressão</strong>, a dignidade humana, a recusa da censura — estas não são aspirações. São o chão mínimo de qualquer civilização que se chame a si mesma justa.</p>
+          <p>A Inquisição acabou. A opressão não. <em>A pergunta é: o que fazemos com isso?</em></p>
+        </div>
+        <div class="dudh-article">
+          <div class="dudh-num">Art. 1.º</div>
+          <p class="dudh-text">"Todos os seres humanos nascem livres e iguais em <strong>dignidade</strong> e em direitos. Dotados de razão e de consciência, devem agir uns para com os outros em espírito de fraternidade."</p>
+          <p class="dudh-sub">— Declaração Universal dos Direitos Humanos, Art. 1.º, 1948 · Ainda por cumprir.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">⬛ DIGNIDADE</div>
+        <p class="footer-sub">Projeto artístico digital · Memorial do Convento · José Saramago</p>
+        <p class="footer-sub">Dignidade Humana · Art. 1.º DUDH · Serão os direitos humanos uma utopia?</p>
+        <div class="footer-tags">
+          <span class="tag tag-sm">#DignidadeHumana</span>
+          <span class="tag tag-sm">#Saramago</span>
+          <span class="tag tag-sm">#AbreOsOlhos</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /page-acao -->
+
+  <script src="script.js"></script>
+</body>
+</html>
