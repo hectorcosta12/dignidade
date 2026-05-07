@@ -321,24 +321,24 @@ body:has(a:hover, button:hover) #cursor { transform: translate(-50%,-50%) scale(
   max-width: 1200px; padding: 0 20px;
 }
 .stat-card {
-  background: var(--grey-mid); padding: 40px 30px;
+  background: var(--grey-mid); padding: clamp(24px, 5vw, 40px) clamp(20px, 4vw, 30px);
   border-top: 3px solid var(--red);
   transition: background .3s, transform .3s var(--ease);
-  width: 100%; max-width: 280px;
+  width: 100%; max-width: none;
   display: flex; flex-direction: column;
-  justify-content: center;
+  justify-content: center; min-height: 240px;
 }
 .stat-card:hover { background: #2a2a2a; transform: translateY(-4px); }
 .stat-num {
-  font-family: var(--bebas); font-size: clamp(2rem,4vw,3rem);
-  color: var(--red); line-height: 1; margin-bottom: .5rem;
+  font-family: var(--bebas); font-size: clamp(1.5rem, 5vw, 3.5rem);
+  color: var(--red); line-height: 1; margin-bottom: clamp(.3rem, 2vw, .8rem);
   letter-spacing: .03em; word-break: break-word;
 }
 .stat-label {
-  font-size: .72rem; color: var(--grey-text); line-height: 1.6; margin-bottom: .5rem;
+  font-size: clamp(.65rem, 2vw, .82rem); color: var(--grey-text); line-height: 1.6; margin-bottom: clamp(.3rem, 1.5vw, .8rem);
 }
 .stat-src {
-  font-size: .55rem; color: rgba(240,236,228,.25); letter-spacing: .15em;
+  font-size: clamp(.5rem, 1.5vw, .65rem); color: rgba(240,236,228,.25); letter-spacing: .15em;
 }
 
 /* ── PARALELO ── */
@@ -901,15 +901,19 @@ body:has(a:hover, button:hover) #cursor { transform: translate(-50%,-50%) scale(
   .poster { padding: 40px 30px; }
 }
 
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+}
+
 @media (max-width: 600px) {
   .hero-title { font-size: clamp(3rem,12vw,5rem); }
   .posts-grid { grid-template-columns: 1fr; place-items: center; }
   .voices-grid { grid-template-columns: 1fr; place-items: center; }
-  .stats-grid { grid-template-columns: 1fr; place-items: center; }
+  .stats-grid { grid-template-columns: 1fr; place-items: center; gap: 10px; }
   .acao-grid { grid-template-columns: 1fr; place-items: center; }
   .post-card { width: 100%; max-width: 100%; }
   .voice-card { width: 100%; max-width: 100%; }
-  .stat-card { width: 100%; max-width: 100%; }
+  .stat-card { width: 100%; max-width: 100%; min-height: 200px; }
   .acao-card { width: 100%; max-width: 100%; }
 }
 
